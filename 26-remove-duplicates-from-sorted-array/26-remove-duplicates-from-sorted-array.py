@@ -27,9 +27,8 @@ class Solution:
                 
                 
             end += 1 
-        print(counter)
-        print(start+1)
+        
                
-        return start + 1
+        return counter
             
         
