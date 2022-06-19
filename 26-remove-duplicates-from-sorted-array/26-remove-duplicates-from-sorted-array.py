@@ -13,7 +13,8 @@ class Solution:
         
         '''
         start = 0 
-        end = 1 
+        end = 1
+        counter = 1 
     
      
         while end < len(nums):
@@ -21,9 +22,13 @@ class Solution:
             if nums[start] != nums[end]:
                 start += 1 
                 nums[start] = nums[end]
+                counter += 1 
+            
                 
                 
             end += 1 
+        print(counter)
+        print(start+1)
                
         return start + 1
             
