@@ -15,19 +15,24 @@ class Solution:
         
         fileSystem = {}
         output = []
-
+        
         for path in paths:
-            currentPath = path.split(" ")
-            for i in range(1,len(currentPath)):
-                (prefix, content) = currentPath[i].split("(")
+            currentDirectory = path.split(" ")
+            for i in range(1,len(currentDirectory)):
+                (prefix,content) = currentDirectory[i].split('(')
                 if content not in fileSystem:
-                    fileSystem[content] = [currentPath[0]+'/'+prefix]
+                    fileSystem[content] = [currentDirectory[0] + "/" +prefix]
                 else:
-                    fileSystem[content].append(currentPath[0]+'/'+prefix)
-
+                    fileSystem[content].append(currentDirectory[0]+"/"+prefix)
+                    
+            
+            
         for val in fileSystem.values():
             if len(val) > 1:
                 output.append(val)
-
-        return output 
-
+                    
+        return output
+                    
+         
+                
+        
